@@ -6,6 +6,10 @@ namespace AbsShape3D
     {
         private double radius;
 
+        /// <summary>
+        /// Initializes a new instance of the Sphere class. 
+        /// </summary>
+        /// <param name="radius">Radius of the sphere. </param>
         public Sphere(double radius)
         {
             Validate(radius);
