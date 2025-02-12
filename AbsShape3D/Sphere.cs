@@ -8,7 +8,8 @@ namespace AbsShape3D
 
         public Sphere(double radius)
         {
-            throw new NotImplementedException();
+            Validate(radius);
+            this.radius = radius;
         }
 
         private void Validate (double radius)
