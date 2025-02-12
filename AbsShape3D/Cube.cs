@@ -11,6 +11,12 @@ namespace AbsShape3D{
             this.side = side;
         }
 
+        /// <summary>
+        /// Validates that the side length is greater than 0.
+        /// </summary>
+        /// <param name="side">The side length of the cube. </param>
+        /// <exception cref="ArgumentException">Throw is the cube side 
+        // is less than or equal to zero. </exception>
         private void Validate(double side)
         {
             if (side <= 0)
