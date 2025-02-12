@@ -14,5 +14,10 @@ public abstract class AbsShape3D
     /// <returns>The surface area as a double. </returns>
     public abstract double GetSurfaceArea();
 
+    /// <summary>
+    /// Returns string representation of a shape, its name, surface area,
+    // and volume. 
+    /// </summary>
+    /// <returns>Returns string. </returns>
     public abstract string Dump();
 }
