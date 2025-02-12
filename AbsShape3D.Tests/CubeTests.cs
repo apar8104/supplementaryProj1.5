@@ -24,5 +24,16 @@ namespace AbsShape3D.Tests
 
             Assert.Equal(27, volume);
         }
+
+        [Fact]
+        public void GetSurfaceArea_ShouldReturnCorrectValue()
+        {
+            double side = 4;
+            Cube cube = new Cube(side);
+
+            double surfaceArea = cube.GetSurfaceArea();
+
+            Assert.Equal(27, surfaceArea);
+        }
     } 
 }
