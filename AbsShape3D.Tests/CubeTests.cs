@@ -45,7 +45,7 @@ namespace AbsShape3D.Tests
             string result = cube.Dump();
 
             Assert.Contains("Cube", result);
-            Assert.Contains("Surface area: 24", result);
+            Assert.Contains("Surface Area: 24", result);
             Assert.Contains("Volume: 8", result);
         }
     } 

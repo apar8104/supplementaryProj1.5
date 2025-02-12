@@ -37,7 +37,7 @@ namespace AbsShape3D{
 
         public override string Dump()
         {
-            throw new NotImplementedException();
+            return $"Cube: Side = {side}, Surface Area: {GetSurfaceArea()}, Volume: {GetVolume()}";
 
         }
     }
