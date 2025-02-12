@@ -5,6 +5,10 @@ namespace AbsShape3D{
     {
         private double side;
 
+        /// <summary>
+        /// Initializes new instance of the cube class. 
+        /// </summary>
+        /// <param name="side">Th length of the side of the cube. </param>
         public Cube(double side)
         {
             Validate(side);
