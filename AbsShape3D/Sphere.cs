@@ -16,6 +16,12 @@ namespace AbsShape3D
             this.radius = radius;
         }
 
+        /// <summary>
+        /// Validates that the radius of the sphere is greater than zero. 
+        /// </summary>
+        /// <param name="radius">The radius of the sphere. </param>
+        /// <exception cref="ArgumentException">Thrown if the radius is 
+        /// less than or equal to zero. </exception>
         private void Validate (double radius)
         {
             if (radius <= 0)
