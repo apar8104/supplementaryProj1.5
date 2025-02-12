@@ -35,5 +35,18 @@ namespace AbsShape3D.Tests
 
             Assert.Equal(4 * Math.PI * Math.Pow(radius, 2), surfaceArea, 5);
         }
+
+        [Fact]
+        public void Dump_ShouldReturnCorrectStringFormat()
+        {
+            double radius = 4;
+            Sphere sphere = new Sphere(radius);
+
+            string result = sphere.Dump();
+
+            Assert.Contains("Sphere", result);
+            Assert.Contains($"Surface Area: {4 * Math.PI * Math.Pow(radius, 2)}", result);
+            Assert.Contains($"Volume: {(4.0 / 3.0) * Math.PI * Math.Pow(radius, 3)}", result);
+        }
     }
 }
