@@ -33,7 +33,7 @@ namespace AbsShape3D.Tests
 
             double surfaceArea = cube.GetSurfaceArea();
 
-            Assert.Equal(27, surfaceArea);
+            Assert.Equal(96, surfaceArea);
         }
 
         [Fact]
