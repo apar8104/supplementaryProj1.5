@@ -7,12 +7,16 @@ namespace AbsShape3D{
 
         public Cube(double side)
         {
-            throw new NotImplementedException();
+            Validate(side);
+            this.side = side;
         }
 
         private void Validate(double side)
         {
-            throw new NotImplementedException();
+            if (side <= 0)
+            {
+                throw new ArgumentException("Side length must be greater than zero. ");
+            }
         }
 
         public override double GetVolume()
@@ -28,7 +32,7 @@ namespace AbsShape3D{
         public override string Dump()
         {
             throw new NotImplementedException();
-            
+
         }
     }
 }
