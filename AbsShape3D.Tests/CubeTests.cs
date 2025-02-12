@@ -35,5 +35,18 @@ namespace AbsShape3D.Tests
 
             Assert.Equal(27, surfaceArea);
         }
+
+        [Fact]
+        public void Dump_ShouldReturnCorrectStringFormat()
+        {
+            double side = 2; 
+            Cube cube = new Cube(side);
+
+            string result = cube.Dump();
+
+            Assert.Contains("Cube", result);
+            Assert.Contains("Surface area: 24", result);
+            Assert.Contains("Volume: 8", result);
+        }
     } 
 }
