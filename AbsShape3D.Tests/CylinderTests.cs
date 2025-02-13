@@ -19,5 +19,11 @@ namespace AbsShape3D.Tests
         {
             Assert.Throws<ArgumentException>(() => new Cylinder(-2, 5));
         }
+
+        [Fact]
+        public void Constructor_ShouldThrowException_WhenHeightIsNegative()
+        {
+            Assert.Throws<ArgumentException>(() => new Cylinder(3, -5));
+        }
     }
 }
