@@ -48,7 +48,7 @@ namespace AbsShape3D
 
         public override string Dump()
         {
-            throw new NotImplementedException();
+            return $"Cylinder: Radius = {radius}, Height = {height}, Surface Area: {GetSurfaceArea()}, Volume: {GetVolume()}";
         }
     }
 }

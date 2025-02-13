@@ -60,8 +60,8 @@ namespace AbsShape3D.Tests
             string result = cylinder.Dump();
 
             Assert.Contains("Cylinder", result);
-            Assert.Contains("Surface Area: {2 * Math.PI * radius * (radius + height)}", result);
-            Assert.Contains("Volume: {Math.PI * Math.Pow(radius, 2) * height}", result);
+            Assert.Contains($"Surface Area: {2 * Math.PI * radius * (radius + height)}", result);
+            Assert.Contains($"Volume: {Math.PI * Math.Pow(radius, 2) * height}", result);
         }
     }
 }
