@@ -17,6 +17,13 @@ namespace AbsShape3D
             this.height = height;
         }
 
+        /// <summary>
+        /// Validates the radius and height are greater than zero. 
+        /// </summary>
+        /// <param name="radius">The radius to validate. </param>
+        /// <param name="height">The height to validate. </param>
+        /// <exception cref="ArgumentException">Thrown if the 
+        // radius/height are less than or equal to zero. </exception>
         private void Validate(double radius, double height)
         {
             if (radius <= 0)
