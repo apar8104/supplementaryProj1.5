@@ -37,7 +37,7 @@ namespace AbsShape3D
 
         public override double GetSurfaceArea()
         {
-            throw new NotImplementedException();
+            return 4 * Math.PI * Math.Pow(radius, 2);
         }
 
         public override string Dump()
