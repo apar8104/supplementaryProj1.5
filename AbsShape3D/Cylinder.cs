@@ -19,7 +19,14 @@ namespace AbsShape3D
 
         private void Validate(double radius, double height)
         {
-            throw new NotImplementedException();
+            if (radius <= 0)
+            {
+                throw new ArgumentException("Radius must be greater than zero. ");
+            }
+            if (height <= 0)
+            {
+                throw new ArgumentException("Height must be greater than zero. ");
+            }
         }
 
         public override double GetVolume()
