@@ -42,7 +42,7 @@ namespace AbsShape3D
 
         public override string Dump()
         {
-            throw new NotImplementedException();
+            return $"Sphere: Radius = {radius}, Surface Area: {GetSurfaceArea()}, Volume: {GetVolume()}";
         }
     }
 }
