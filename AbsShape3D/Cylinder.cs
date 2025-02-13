@@ -7,7 +7,9 @@ namespace AbsShape3D
 
         public Cylinder(double radius, double height)
         {
-            throw new NotImplementedException();
+            Validate(radius, height);
+            this.radius = radius;
+            this.height = height;
         }
 
         private void Validate(double radius, double height)
