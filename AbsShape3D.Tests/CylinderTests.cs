@@ -37,5 +37,17 @@ namespace AbsShape3D.Tests
 
             Assert.Equal(Math.PI * Math.Pow(radius, 2) * height, volume, 5);
         }
+
+        [Fact]
+        public void GetSurfaceArea_ShouldReturnCorrectSurfaceArea()
+        {
+            double radius = 4;
+            double height = 7;
+            Cylinder cylinder = new Cylinder(radius, height);
+
+            double surfaceArea = cylinder.GetSurfaceArea();
+
+            Assert.Equal(2 * Math.PI * radius * (radius + height), surfaceArea, 5);
+        }
     }
 }
