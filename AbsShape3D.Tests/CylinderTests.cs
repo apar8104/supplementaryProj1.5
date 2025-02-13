@@ -7,5 +7,11 @@ namespace AbsShape3D.Tests
         {
             Assert.Throws<ArgumentException>(() => new Cylinder(0, 5));
         }
+
+        [Fact]
+        public void Constructor_ShouldThrowException_WhenHeightIsZero()
+        {
+            Assert.Throws<ArgumentException>(() => new Cylinder(3, 0));
+        }
     }
 }
