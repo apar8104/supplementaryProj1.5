@@ -38,7 +38,7 @@ namespace AbsShape3D
 
         public override double GetVolume()
         {
-            throw new NotImplementedException();
+            return Math.PI * Math.Pow(radius, 2) * height;
         }
 
         public override double GetSurfaceArea()
