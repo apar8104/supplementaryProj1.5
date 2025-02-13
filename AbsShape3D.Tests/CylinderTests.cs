@@ -13,5 +13,11 @@ namespace AbsShape3D.Tests
         {
             Assert.Throws<ArgumentException>(() => new Cylinder(3, 0));
         }
+
+        [Fact]
+        public void Constructor_ShouldThrowException_WhenRadiusIsNegative()
+        {
+            Assert.Throws<ArgumentException>(() => new Cylinder(-2, 5));
+        }
     }
 }
