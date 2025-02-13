@@ -49,5 +49,19 @@ namespace AbsShape3D.Tests
 
             Assert.Equal(2 * Math.PI * radius * (radius + height), surfaceArea, 5);
         }
+
+        [Fact]
+        public void Dump_ShouldReturnCorrectStringFormat()
+        {
+            double radius = 2;
+            double height = 6;
+            Cylinder cylinder = new Cylinder(radius, height);
+
+            string result = cylinder.Dump();
+
+            Assert.Contains("Cylinder", result);
+            Assert.Contains("Surface Area: {2 * Math.PI * radius * (radius + height)}", result);
+            Assert.Contains("Volume: {Math.PI * Math.Pow(radius, 2) * height}", result);
+        }
     }
 }
