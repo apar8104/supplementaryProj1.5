@@ -33,5 +33,18 @@ namespace AbsShape3D.Tests
 
             Assert.Throws<ArgumentOutOfRangeException>(() => container.Get(0));
         }
+
+        [Fact]
+        public void Delete_ShouldRemoveShapeFromContainer()
+        {
+            var container = new ShapeContainer();
+            var cylinder = new Cylinder(2, 5);
+            container.Create(cylinder);
+
+            bool result = container.Delete(0);
+
+            Assert.True(result);
+            Assert.Throws<ArgumentOutOfRangeException>(() => container.Get(0));
+        }
     }
 }
