@@ -113,5 +113,15 @@ namespace AbsShape3D
                 }
             }
         }
+
+        static void DeleteShape(ShapeContainer container)
+        {
+            Console.Write("Enter shape index: ");
+            if (int.TryParse(Console.ReadLine(), out int index))
+            {
+                bool result = container.Delete(index);
+                Console.WriteLine(result ? "Shape deleted." : "Invalid index. Deletion failed.");
+            }
+        }
     }
 }
