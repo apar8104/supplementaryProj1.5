@@ -46,5 +46,14 @@ namespace AbsShape3D.Tests
             Assert.True(result);
             Assert.Throws<ArgumentOutOfRangeException>(() => container.Get(0));
         }
+
+        [Fact]
+        public void Delete_ShouldReturnFalse_WhenIndexIsImvalid()
+        {
+            var container = new ShapeContainer();
+            bool result = container.Delete(0);
+
+            Assert.False(result);
+        }
     }
 }
