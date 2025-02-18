@@ -8,7 +8,7 @@ namespace AbsShape3D
 
         public void Create(AbsShape3D shape)
         {
-            throw new NotImplementedException();
+            shapes.Add(shape);
         }
 
         public AbsShape3D Get(int index)
