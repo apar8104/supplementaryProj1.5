@@ -78,5 +78,12 @@ namespace AbsShape3D
             double side = double.Parse(Console.ReadLine() ?? "0");
             return new Cube(side);
         }
+
+        static AbsShape3D CreateSphere()
+        {
+            Console.WriteLine("Enter radius: ");
+            double radius = double.Parse(Console.ReadLine() ?? "0");
+            return new Sphere(radius);
+        }
     }
 }
