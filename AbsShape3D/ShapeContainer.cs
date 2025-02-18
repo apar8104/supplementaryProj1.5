@@ -13,7 +13,11 @@ namespace AbsShape3D
 
         public AbsShape3D Get(int index)
         {
-            throw new NotImplementedException();
+            if (index < 0 || index >= shapes.Count)
+            {
+                throw new ArgumentOutOfRangeException(nameof(index), "Invalid index.");
+            }
+            return shapes[index];
         }
         
         public bool Delete(int index)
