@@ -72,6 +72,11 @@ namespace AbsShape3D
             }
         }
 
-        
+        static AbsShape3D CreateCube()
+        {
+            Console.WriteLine("Enter side length: ");
+            double side = double.Parse(Console.ReadLine() ?? "0");
+            return new Cube(side);
+        }
     }
 }
