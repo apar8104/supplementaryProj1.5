@@ -6,6 +6,10 @@ namespace AbsShape3D
     {
         private List<AbsShape3D> shapes = new List<AbsShape3D>();
 
+        /// <summary>
+        /// Adds a AbsShape3D object to the container. 
+        /// </summary>
+        /// <param name="shape">The shape to add to the container.</param>
         public void Create(AbsShape3D shape)
         {
             shapes.Add(shape);
