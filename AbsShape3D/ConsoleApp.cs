@@ -1,5 +1,6 @@
 using System.Dynamic;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks.Dataflow;
 using AbsShape3D;
 namespace AbsShape3D
 {
@@ -93,6 +94,24 @@ namespace AbsShape3D
             Console.WriteLine("Enter height: ");
             double height = double.Parse(Console.ReadLine() ?? "0");
             return new Cylinder(radius, height);
+        }
+
+        static void GetShape(ShapeContainer container)
+        {
+            Console.Write("Enter shape index: ");
+            if (int.TryParse(Console.ReadLine(), out int index))
+            {
+                try
+                {
+                    var shape = container.Get(index);
+                    Console.WriteLine("Shape details:");
+                    Console.WriteLine(shape.Dump());
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error: {ex.Message}");
+                }
+            }
         }
     }
 }
