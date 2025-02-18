@@ -25,5 +25,13 @@ namespace AbsShape3D.Tests
 
             Assert.Equal(sphere, result);
         }
+
+        [Fact]
+        public void Get_ShouldThrowException_WhenIndexIsInvalid()
+        {
+            var container = new ShapeContainer();
+
+            Assert.Throws<ArgumentOutOfRangeException>(() => container.Get(0));
+        }
     }
 }
