@@ -20,7 +20,8 @@ namespace AbsShape3D
         /// </summary>
         /// <param name="index">The index of the shape to retrieve. </param>
         /// <returns>The Absshape3D object at the specified index. </returns>
-        /// <exception cref="ArgumentOutOfRangeException"> Thrown if the index is invalid.</exception>
+        /// <exception cref="ArgumentOutOfRangeException"> Thrown if the 
+        // index is invalid.</exception>
         public AbsShape3D Get(int index)
         {
             if (index < 0 || index >= shapes.Count)
@@ -30,6 +31,11 @@ namespace AbsShape3D
             return shapes[index];
         }
         
+        /// <summary>
+        /// Removes the AbsShape3D object at the specified index. 
+        /// </summary>
+        /// <param name="index">The index of the shape to remove.</param>
+        /// <returns>True if shape was removed, false if the index was invalid. </returns>
         public bool Delete(int index)
         {
             if (index < 0 || index >= shapes.Count)
