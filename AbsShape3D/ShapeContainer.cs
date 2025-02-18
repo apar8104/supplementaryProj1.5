@@ -15,6 +15,12 @@ namespace AbsShape3D
             shapes.Add(shape);
         }
 
+        /// <summary>
+        /// Retrieves the AbsShape3D object at the specified index.
+        /// </summary>
+        /// <param name="index">The index of the shape to retrieve. </param>
+        /// <returns>The Absshape3D object at the specified index. </returns>
+        /// <exception cref="ArgumentOutOfRangeException"> Thrown if the index is invalid.</exception>
         public AbsShape3D Get(int index)
         {
             if (index < 0 || index >= shapes.Count)
