@@ -85,5 +85,14 @@ namespace AbsShape3D
             double radius = double.Parse(Console.ReadLine() ?? "0");
             return new Sphere(radius);
         }
+
+        static AbsShape3D CreateCylinder()
+        {
+            Console.WriteLine("Enter radius: ");
+            double radius = double.Parse(Console.ReadLine() ?? "0");
+            Console.WriteLine("Enter height: ");
+            double height = double.Parse(Console.ReadLine() ?? "0");
+            return new Cylinder(radius, height);
+        }
     }
 }
