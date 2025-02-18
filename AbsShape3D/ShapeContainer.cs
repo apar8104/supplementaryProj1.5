@@ -22,7 +22,12 @@ namespace AbsShape3D
         
         public bool Delete(int index)
         {
-            throw new NotImplementedException();
+            if (index < 0 || index >= shapes.Count)
+            {
+                return false;
+            }
+            shapes.RemoveAt(index);
+            return true;
         }
      }
 }
