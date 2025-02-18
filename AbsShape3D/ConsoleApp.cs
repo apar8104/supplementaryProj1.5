@@ -31,7 +31,7 @@ namespace AbsShape3D
                         DeleteShape(container);
                         break;
                     case "list":
-                        ListShape(container);
+                        ListShapes(container);
                         break;
                     case "exit":
                         running = false;
@@ -121,6 +121,16 @@ namespace AbsShape3D
             {
                 bool result = container.Delete(index);
                 Console.WriteLine(result ? "Shape deleted." : "Invalid index. Deletion failed.");
+            }
+        }
+
+        static void ListShapes(ShapeContainer container)
+        {
+            Console.WriteLine("\nCurrent Shapes in Container: ");
+            for (int i = 0; i < container.Count; i++)
+            {
+                var shape = container.Get(i);
+                Console.WriteLine($"[{i}] {shape.Dump()}");
             }
         }
     }

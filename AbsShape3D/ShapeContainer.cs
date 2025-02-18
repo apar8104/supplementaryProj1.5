@@ -4,6 +4,7 @@ namespace AbsShape3D
 {
     public class ShapeContainer
     {
+        public int Count => shapes.Count;
         private List<AbsShape3D> shapes = new List<AbsShape3D>();
 
         /// <summary>
